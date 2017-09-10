@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+}
+
+header {
+    height: 200px;
+    width: 100%;
+    background-color: red;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: green;
+}
+
+#mainBody {
+    height: 800px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: blue;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    background-color: red;
+}
