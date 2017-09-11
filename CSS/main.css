@@ -31,11 +31,11 @@ nav {
 }
 
 nav>ul {
+    list-style-type: none;
     width: 100%;
     background: #e4e4e4;
-    list-style-type: none;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden;
 }
 
 nav>ul>li {
