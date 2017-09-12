@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>iddex</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/main.css">
-    <script type="text/javascript" src="./JS/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./CSS//mp3List.css">
+    <script type="text/javascript" src="./JS/mp3List.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body style="background: url(./Public/Image/background.jpg) no-repeat center fixed;">
     <form id="main">
         <!--header-->
         <header>
@@ -43,9 +44,25 @@
         </nav>
         <!--show-->
         <section id="show">
-            
-
-
+            <audio id="audioarea" controls="controls" autoplay="true"></audio>
+            <ul id="playlistmp3">
+                <li mp3url="Public/mp3/DoiThay.mp3">Doi thay</li>
+                <li mp3url="Public/mp3/NguoiAy.mp3">Nguoi Ay</li>
+                <li mp3url="Public/mp3/yeu.mp3">Yeu</li>
+            </ul>
+            <script type="text/javascript">
+            $(function() {
+                $("#playlistmp3 li").on("click", function() {
+                    $("#audioarea").attr({
+                        "src": $(this).attr("mp3url"),
+                        "autoplay": "autoplay"
+                    })
+                })
+                $("#audioarea").attr({
+                    "src": $("#playlistmp3 li").eq(0).attr("mp3url")
+                })
+            })
+            </script>
         </section>
         <!--footer-->
         <footer>
