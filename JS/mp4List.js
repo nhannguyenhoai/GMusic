@@ -4,18 +4,18 @@ function loadPlaylistVideo() {
      */
     var listElementLI = document.getElementsByTagName("li");
     for (var i = 0; i < listElementLI.length; i++) {
-        if (listElementLI[i].parentNode.id === "playlist_video") {
-            listElementLI[i].setAttribute("style", "color: #0BF521;");
+        if (listElementLI[i].parentNode.id === "playlist-video") {
+            listElementLI[i].setAttribute("style", "backgroud-color: white;");
         }
     }
     /**
      * Get attribute of element <li> clicked, then change element <video> source
      */
     var urlVS = window.event.target.getAttribute("urlVideoSource");
-    document.getElementById("video_area").setAttribute("src", urlVS);
-    document.getElementById("video_area").setAttribute("autoplay", "true");
+    document.getElementById("video-area").setAttribute("src", urlVS);
+    document.getElementById("video-area").setAttribute("autoplay", "true");
     /**
      * Return set attribute style color of element <li> clicked
      */
-    window.event.target.setAttribute("style", "color: blue;");
+    window.event.target.setAttribute("style", "color: cyan;");
 }
