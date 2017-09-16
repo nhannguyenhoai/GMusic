@@ -91,7 +91,6 @@ header p {
 }
 
 #playlist_video li:hover {
-    color: blue;
     background-color: rgba(0, 0, 0, 0.8);
 }
 

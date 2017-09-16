@@ -5,7 +5,7 @@ function loadPlaylistVideo() {
     var listElementLI = document.getElementsByTagName("li");
     for (var i = 0; i < listElementLI.length; i++) {
         if (listElementLI[i].parentNode.id === "playlist_video") {
-            listElementLI[i].setAttribute("style", "color:#0BF521;");
+            listElementLI[i].setAttribute("style", "color: #0BF521;");
         }
     }
     /**
