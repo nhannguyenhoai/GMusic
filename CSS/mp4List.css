@@ -75,6 +75,44 @@ nav ul li a font {
     height: 480px;
 }
 
+::-webkit-media-controls {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    display: -webkit-flex;
+    -webkit-align-items: flex-start;
+    -webkit-justify-content: flex-end;
+    -webkit-flex-direction: column;
+}
+
+audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-user-select: none;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    height: inherit;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+video:-webkit-full-page-media {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+video:-webkit-full-page-media::-webkit-media-controls-panel {
+    bottom: 0px;
+}
+
 #playlist-video {
     list-style-type: none;
     width: 100%;
