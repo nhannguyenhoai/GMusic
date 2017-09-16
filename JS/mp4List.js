@@ -7,7 +7,7 @@ function loadFirst(elementId) {
             var childurlSrc = childs[i].getAttribute("urlSrc");
             document.getElementById("video-area").setAttribute("src", childurlSrc);
             document.getElementById("video-area").setAttribute("autoplay", "true");
-            document.getElementById("status").innerHTML = "Video playing: " + childurlSrc;
+            document.getElementById("status").innerHTML = ("Video playing: " + childurlSrc).replace("Public/mp4/", "");
             currentChilds = i;
             currentChilds++;
             break;
@@ -32,5 +32,5 @@ function loadOnclick(elementId) {
     var urlSrc = window.event.target.getAttribute("urlSrc");
     document.getElementById("video-area").setAttribute("src", urlSrc);
     document.getElementById("video-area").setAttribute("autoplay", "true");
-    document.getElementById("status").innerHTML = "Video playing: " + urlSrc;
+    document.getElementById("status").innerHTML = ("Video playing: " + urlSrc).replace("Public/mp4/", "");
 }
