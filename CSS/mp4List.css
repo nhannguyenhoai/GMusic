@@ -70,16 +70,23 @@ nav ul li a font {
     margin: auto;
 }
 
+#video-area {
+    width: 100%;
+    height: 480px;
+}
+
 #playlist-video {
     list-style-type: none;
     width: 100%;
-    display: table;
+    height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 #status {
     font-size: 15px;
     color: white;
     text-align: center;
-    padding: 5px 10px 10px 0px;
+    padding: 0px 10px 10px 0px;
 }
 #playlist-video li {
     cursor: pointer;
@@ -93,11 +100,6 @@ nav ul li a font {
 #playlist-video li:hover {
     background-color: rgba(0, 0, 0, 0.8);
     color: cyan;
-}
-
-#video-area {
-    width: 100%;
-    height: 480px;
 }
 
 footer {
