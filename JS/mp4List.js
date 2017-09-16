@@ -1,33 +1,36 @@
-function loadFirstVideo(){
-    var listElementLI = document.getElementsByTagName("li");
-    for (var i = 0; i < listElementLI.length; i++) {
-        if (listElementLI[i].parentNode.id === "playlist-video") {
-            listElementLI[i].setAttribute("style", "backgroud-color: cyan;");
-            var urlVS = listElementLI[i].getAttribute("urlVideoSource");
-            document.getElementById("video-area").setAttribute("src", urlVS);
+function loadFirst(elementId) {
+    var childs = document.getElementsByTagName("li");
+    var countChilds = childs.length;
+    var currentChilds = 0;
+    for (var i = 0; i < countChilds; i++) {
+        if (childs[i].parentNode.id === elementId) {
+            var childurlSrc = childs[i].getAttribute("urlSrc");
+            document.getElementById("video-area").setAttribute("src", childurlSrc);
             document.getElementById("video-area").setAttribute("autoplay", "true");
+            document.getElementById("status").innerHTML = "Video playing: " + childurlSrc;
+            currentChilds = i;
+            currentChilds++;
             break;
         }
     }
-}
-function loadOnclick() {
-    /**
-     * Set default color for all element <li>
-     */
-    var listElementLI = document.getElementsByTagName("li");
-    for (var i = 0; i < listElementLI.length; i++) {
-        if (listElementLI[i].parentNode.id === "playlist-video") {
-            listElementLI[i].setAttribute("style", "color: white;");
+    var video = document.getElementById("video-area");
+    video.addEventListener('ended', function () {
+        //if (currentChilds < countChilds) {
+        for (var i = currentChilds; i < countChilds; i++) {
+            if (childs[i].parentNode.id === elementId) {
+                var childurlSrc = childs[i].getAttribute("urlSrc");
+                document.getElementById("video-area").setAttribute("src", childurlSrc);
+                document.getElementById("video-area").setAttribute("autoplay", "true");
+                currentChilds++;
+                break;
+            }
         }
-    }
-    /**
-     * Get attribute of element <li> clicked, then change element <video> source
-     */
-    var urlVS = window.event.target.getAttribute("urlVideoSource");
-    document.getElementById("video-area").setAttribute("src", urlVS);
+        //}
+    })
+}
+function loadOnclick(elementId) {
+    var urlSrc = window.event.target.getAttribute("urlSrc");
+    document.getElementById("video-area").setAttribute("src", urlSrc);
     document.getElementById("video-area").setAttribute("autoplay", "true");
-    /**
-     * Return set attribute style color of element <li> clicked
-     */
-    window.event.target.setAttribute("style", "color: cyan;");
+    document.getElementById("status").innerHTML = "Video playing: " + urlSrc;
 }

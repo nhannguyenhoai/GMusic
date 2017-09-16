@@ -75,7 +75,12 @@ nav ul li a font {
     width: 100%;
     display: table;
 }
-
+#status {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    padding: 5px 10px 10px 0px;
+}
 #playlist-video li {
     cursor: pointer;
     font-size: 15px;
