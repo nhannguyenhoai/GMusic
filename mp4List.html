@@ -6,10 +6,9 @@
     <title>iddex</title>
     <link rel="stylesheet" type="text/css" href="./CSS/mp4List.css">
     <script type="text/javascript" src="./JS/mp4List.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body style="background: url(./Public/Image/background.jpg) no-repeat center fixed;">
+<body>
     <form id="main">
         <!--header-->
         <header>
@@ -44,26 +43,13 @@
         </nav>
         <!--main_body-->
         <section id="main_body">
-            <video id="videoarea" controls loop></video>         
-            <ul id="playlist">
-                <li movieurl="Public/mp4/Nightcore - All of Me.mp4">All of Me</li>
-                <li movieurl="Public/mp4/Nightcore - Apologize.mp4">Apologize</li>
-                <li movieurl="Public/mp4/Nightcore - Battlefield.mp4">Battlefield</li>
-                <li movieurl="Public/mp4/Nightcore - Impossible.mp4">Impossible</li>
+            <video id="video_area" controls loop></video>
+            <ul id="playlist_video" onclick="return loadPlaylistVideo()">
+                <li urlVideoSource="Public/mp4/Nightcore - All of Me.mp4">All of Me</li>
+                <li urlVideoSource="Public/mp4/Nightcore - Apologize.mp4">Apologize</li>
+                <li urlVideoSource="Public/mp4/Nightcore - Battlefield.mp4">Battlefield</li>
+                <li urlVideoSource="Public/mp4/Nightcore - Impossible.mp4">Impossible</li>
             </ul>
-            <script type="text/javascript">
-            $(function() {
-                $("#playlist li").on("click", function() {
-                    $("#videoarea").attr({
-                        "src": $(this).attr("movieurl"),
-                        "autoplay": "autoplay"
-                    })
-                })
-                $("#videoarea").attr({
-                    "src": $("#playlist li").eq(0).attr("movieurl")
-                })
-            })
-            </script>
         </section>
         <!--footer-->
         <footer>

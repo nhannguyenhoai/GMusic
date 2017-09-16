@@ -17,13 +17,13 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-header>p {
+header p {
     height: 30px;
     text-align: center;
     padding: 10px 0px 10px 0px;
 }
 
-header>p>font {
+header p font {
     font-size: 30px;
     color: white;
 }
@@ -35,14 +35,14 @@ nav {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-nav>ul {
+nav ul {
     list-style-type: none;
     width: 100%;
     text-align: center;
     overflow: hidden;
 }
 
-nav>ul>li {
+nav ul li {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -50,21 +50,21 @@ nav>ul>li {
     line-height: 40px;
 }
 
-nav>ul>li>a {
+nav ul li a {
     text-decoration: none;
     color: white;
     display: block;
 }
 
-nav>ul>li>a:hover {
+nav ul li a:hover {
     color: blue;
 }
 
-nav>ul>li>a>font {
+nav ul li a font {
     font-size: 17px;
 }
 
-header>p {
+header p {
     height: 30px;
     text-align: center;
 }
@@ -75,26 +75,31 @@ header>p {
     margin: auto;
 }
 
-#playlist {
+video {
+    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#playlist_video {
     list-style-type: none;
     width: 100%;
     display: table;
 }
 
-#playlist li {
+#playlist_video li {
     color: #0BF521;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-#playlist li:hover {
-    color: red;
-    background-color: #4F4C4C;
+#playlist_video li:hover {
+    color: blue;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#videoarea {
+#video_area {
     width: 100%;
     height: 480px;
 }
@@ -106,14 +111,14 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-footer>p {
+footer p {
     height: 30px;
     text-align: center;
     color: white;
     padding: 35px 0px 35px 0px;
 }
 
-footer>p>font {
+footer p font {
     font-size: 20px;
     color: white;
 }
