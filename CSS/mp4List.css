@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+html { 
+    background: url(../Public/Image/background.jpg) no-repeat center fixed;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -10,7 +14,7 @@ body {
 header {
     height: 50px;
     width: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header>p {
@@ -28,12 +32,12 @@ nav {
     height: 40px;
     width: 100%;
     margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 nav>ul {
     list-style-type: none;
     width: 100%;
-    background: #e4e4e4;
     text-align: center;
     overflow: hidden;
 }
@@ -48,12 +52,12 @@ nav>ul>li {
 
 nav>ul>li>a {
     text-decoration: none;
-    color: black;
+    color: white;
     display: block;
 }
 
 nav>ul>li>a:hover {
-    color: red;
+    color: blue;
 }
 
 nav>ul>li>a>font {
@@ -65,7 +69,7 @@ header>p {
     text-align: center;
 }
 
-#liveshow {
+#main_body {
     height: 1200px;
     width: 800px;
     margin: auto;
@@ -98,8 +102,8 @@ header>p {
 footer {
     height: 100px;
     width: 100%;
-    background-color: #000;
-    margin-top: 5px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer>p {
