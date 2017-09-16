@@ -85,7 +85,7 @@ nav ul li a font {
     -webkit-flex-direction: column;
 }
 
-audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+video::-webkit-media-controls-panel {
     display: -webkit-flex;
     -webkit-flex-direction: row;
     -webkit-align-items: center;
@@ -97,7 +97,7 @@ audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
     overflow: hidden;
     height: inherit;
     text-align: right;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 video:-webkit-full-page-media {
@@ -127,7 +127,7 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0); 
     -webkit-border-radius: 10px;
     border-radius: 0px;
 }
@@ -137,7 +137,7 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: rgba(0, 255, 255, 0.5);
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); 
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(0, 255, 255, 0.5); 
