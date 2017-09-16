@@ -25,7 +25,7 @@ header p {
 
 header p font {
     font-size: 30px;
-    color: white;
+    color: cyan;
 }
 
 nav {
@@ -52,7 +52,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: cyan;
     display: block;
 }
 
@@ -72,7 +72,7 @@ nav ul li a font {
 
 #video-area {
     width: 100%;
-    height: 480px;
+    height: 480;
 }
 
 ::-webkit-media-controls {
@@ -80,16 +80,10 @@ nav ul li a font {
     height: inherit;
     position: relative;
     display: -webkit-flex;
-    -webkit-align-items: flex-start;
-    -webkit-justify-content: flex-end;
-    -webkit-flex-direction: column;
 }
 
 video::-webkit-media-controls-panel {
     display: -webkit-flex;
-    -webkit-flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-user-select: none;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -114,30 +108,25 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
 }
 
 #playlist-video {
-    list-style-type: none;
     width: 100%;
     height: 300px;
     overflow: scroll;
     overflow-x: hidden;
 }
-/* Let's get this party started */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0); 
-    -webkit-border-radius: 10px;
+    -webkit-border-radius: 0px;
     border-radius: 0px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
     background: rgba(0, 255, 255, 0.5);
-    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); 
 }
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(0, 255, 255, 0.5); 
@@ -145,7 +134,7 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
 
 #status {
     font-size: 15px;
-    color: white;
+    color: cyan;
     text-align: center;
     padding: 0px 10px 10px 0px;
 }
@@ -153,10 +142,10 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
 #playlist-video li {
     cursor: pointer;
     font-size: 15px;
-    color: white;
-    padding: 10px;
+    color: cyan;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #playlist-video li:hover {
@@ -174,11 +163,11 @@ footer {
 footer p {
     height: 30px;
     text-align: center;
-    color: white;
+    color: cyan;
     padding: 35px 0px 35px 0px;
 }
 
 footer p font {
     font-size: 20px;
-    color: white;
+    color: cyan;
 }
