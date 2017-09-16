@@ -61,7 +61,7 @@ nav ul li a:hover {
 }
 
 nav ul li a font {
-    font-size: 17px;
+    font-size: 15px;
 }
 
 header p {
@@ -75,11 +75,6 @@ header p {
     margin: auto;
 }
 
-video {
-    background-color: rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.5);
-}
-
 #playlist_video {
     list-style-type: none;
     width: 100%;
@@ -87,10 +82,11 @@ video {
 }
 
 #playlist_video li {
-    color: #0BF521;
-    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    padding: 20px;
+    font-size: 15px;
+    color: #0BF521;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
