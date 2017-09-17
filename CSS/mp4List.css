@@ -112,6 +112,7 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
     height: 300px;
     overflow: scroll;
     overflow-x: hidden;
+    
 }
 
 ::-webkit-scrollbar {
@@ -137,6 +138,16 @@ video:-webkit-full-page-media::-webkit-media-controls-panel {
     color: cyan;
     text-align: center;
     padding: 0px 10px 10px 0px;
+}
+
+#loadNextMedia, #loadPrevousMedia  {
+    height: 100%;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    color: cyan;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid cyan;
 }
 
 #playlist-video li {

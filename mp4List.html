@@ -8,7 +8,7 @@
     <script type="text/javascript" src="./JS/mp4List.js"></script>
 </head>
 
-<body onload="loadFirst('video-area', 'playlist-video', 'status')">
+<body onload="loadFirstMedia('video-area', 'playlist-video', 'status')">
     <form id="main">
         <!--header-->
         <header>
@@ -46,12 +46,16 @@
             <!--video_area-->
             <video id="video-area" controls></video>
             <p id="status"></p>
-            <ol id="playlist-video" onclick="loadOnclick('video-area', 'playlist-video', 'status')">
+            <center>
+                <input type="button" id="loadNextMedia" value="Next" onclick="loadNextMedia('video-area', 'playlist-video', 'status')">
+                <input type="button" id="loadPrevousMedia" value="Prevous" onclick="loadPrevousMedia('video-area', 'playlist-video', 'status')">
+            </center>
+            <ul id="playlist-video" onclick="loadOnclick('video-area', 'playlist-video', 'status')">
                 <li urlSrc="Public/mp4/Nightcore - All of Me.mp4">All of Me</li>
                 <li urlSrc="Public/mp4/Nightcore - Apologize.mp4">Apologize</li>
                 <li urlSrc="Public/mp4/Nightcore - Battlefield.mp4">Battlefield</li>
                 <li urlSrc="Public/mp4/Nightcore - Impossible.mp4">Impossible</li>
-            </ol>
+            </ul>
         </section>
         <!--footer-->
         <footer>

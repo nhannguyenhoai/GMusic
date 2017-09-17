@@ -1,58 +1,90 @@
-function loadNext(mediaId, playlistId, statusId, countChilds, childs, currentChilds) {
-    var video = document.getElementById(mediaId);
-    video.addEventListener('ended', function () {
-        if (currentChilds < countChilds) {
-            for (var i = currentChilds; i < countChilds; i++) {
-                if (childs[i].parentNode.id === playlistId) {
-                    var childurlSrc = childs[i].getAttribute("urlSrc");
-                    document.getElementById(mediaId).setAttribute("src", childurlSrc);
-                    document.getElementById(mediaId).setAttribute("autoplay", "true");
-                    document.getElementById(statusId).innerHTML = ("Video playing: " + childurlSrc).replace("Public/mp4/", "");
-                    currentChilds++;
-                    break;
-                }
-            }
+var currentIndex = 0;
+function getChildsBaseOnParent(childTag, parentId) {
+    var ElementsByChildTag = document.getElementsByTagName(childTag);
+    var childs = [];
+    var index = 0;
+    for (var i = 0; i < ElementsByChildTag.length; i++) {
+        if (ElementsByChildTag[i].parentNode.id === parentId) {
+            childs[index] = ElementsByChildTag[i];
+            index++;
         }
-    })
+    }
+    return childs;
 }
-function loadFirst(mediaId, playlistId, statusId) {
-    var childs = document.getElementsByTagName("li");
-    var countChilds = childs.length;
-    var currentChilds = 0;
-    if (currentChilds < countChilds) {
-        for (var i = 0; i < countChilds; i++) {
-            if (childs[i].parentNode.id === playlistId) {
-                var childurlSrc = childs[i].getAttribute("urlSrc");
-                document.getElementById(mediaId).setAttribute("src", childurlSrc);
-                document.getElementById(mediaId).setAttribute("autoplay", "true");
-                document.getElementById(statusId).innerHTML = ("Video playing: " + childurlSrc).replace("Public/mp4/", "");
-                currentChilds = i;
-                currentChilds++;
-                break;
-            }
-        }
-        loadNext(mediaId, playlistId, statusId, countChilds, childs, currentChilds);
+function setDefaultColor(childs) {
+    for (var i = 0; i < childs.length; i++) {
+        childs[i].setAttribute("style", "color: cyan");
     }
 }
-function loadOnclick(mediaId, playlistId, statusId) {
-    var childs = document.getElementsByTagName("li");
-    var countChilds = childs.length;
-    var currentChilds = 0;
-    var urlSrc = window.event.target.getAttribute("urlSrc");
-    document.getElementById(mediaId).setAttribute("src", urlSrc);
-    document.getElementById(mediaId).setAttribute("autoplay", "true");
+function setStatus(statusId, urlSrc) {
     document.getElementById(statusId).innerHTML = ("Video playing: " + urlSrc).replace("Public/mp4/", "");
-    if (currentChilds < countChilds) {
-        for (var i = 0; i < countChilds; i++) {
-            if (window.event.target === childs[i]) {
-                currentChilds = i;
-                currentChilds++;
-                break;
-            }
-            else {
-                currentChilds++;
-            }
+}
+function setMediaSrc(media, urlSrc, statusId) {
+    document.getElementById(media).setAttribute("src", urlSrc);
+    document.getElementById(media).setAttribute("autoplay", "true");
+    setStatus(statusId, urlSrc)
+}
+function loadFirstMedia(media, playlistId, statusId) {
+    currentIndex = 0;
+    var childs = getChildsBaseOnParent("li", playlistId);
+    var urlSrc = childs[currentIndex].getAttribute("urlSrc");
+    childs[currentIndex].setAttribute("style", "color: red");
+    setMediaSrc(media, urlSrc, statusId);
+    currentIndex++;
+    var md = document.getElementById(media);
+    md.addEventListener("ended", function () {
+        if (currentIndex < childs.length) {
+            setDefaultColor(childs);
+            childs[currentIndex].setAttribute("style", "color: red");
+            setMediaSrc(media, childs[currentIndex].getAttribute("urlSrc"), statusId);
+            currentIndex++;
         }
-        loadNext(mediaId, playlistId, statusId, countChilds, childs, currentChilds);
+        else {
+            currentIndex = 0;
+        }
+    });
+}
+function loadOnclick(media, playlistId, statusId) {
+    var childIsClicked = window.event.target;
+    var childs = getChildsBaseOnParent("li", playlistId);
+    setDefaultColor(childs);
+    for (var i = 0; i < childs.length; i++) {
+        if (childs[i] === childIsClicked) {
+            currentIndex = i;
+        }
+    }
+    childs[currentIndex].setAttribute("style", "color: red");
+    setMediaSrc(media, childs[currentIndex].getAttribute("urlSrc"), statusId);
+    currentIndex++;
+}
+function loadNextMedia(media, playlistId, statusId) {
+    var childs = getChildsBaseOnParent("li", playlistId);
+    if (currentIndex < childs.length) {
+        setDefaultColor(childs);
+        childs[currentIndex].setAttribute("style", "color: red");
+        setMediaSrc(media, childs[currentIndex].getAttribute("urlSrc"), statusId);
+        currentIndex++;
+    }
+    else {
+        setDefaultColor(childs);
+        loadFirstMedia(media, playlistId, statusId);
+    }
+}
+function loadPrevousMedia(media, playlistId, statusId) {
+    console.log(currentIndex);
+    var childs = getChildsBaseOnParent("li", playlistId);
+    if (currentIndex - 1 > 0) {
+        console.log(currentIndex);
+        setDefaultColor(childs);
+        currentIndex -= 2;
+        childs[currentIndex].setAttribute("style", "color: red");
+        setMediaSrc(media, childs[currentIndex].getAttribute("urlSrc"), statusId);
+        currentIndex++;
+    }
+    else {
+        currentIndex = childs.length - 1;
+        console.log(currentIndex);
+        setDefaultColor(childs);
+        loadNextMedia(media, playlistId, statusId);
     }
 }
