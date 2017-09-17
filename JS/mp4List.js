@@ -28,6 +28,7 @@ function loadFirstMedia(media, playlistId, statusId) {
     currentIndex = 0;
     var childs = getChildsBaseOnParent("li", playlistId);
     var urlSrc = childs[currentIndex].getAttribute("urlSrc");
+    setDefaultColor(childs);
     childs[currentIndex].setAttribute("style", "color: red");
     setMediaSrc(media, urlSrc, statusId);
     currentIndex++;
