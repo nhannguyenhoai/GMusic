@@ -17,14 +17,15 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-header>p {
+header p {
     height: 30px;
+    text-align: center;
     padding: 10px 0px 10px 0px;
 }
 
-header>p>font {
+header p font {
     font-size: 30px;
-    color: white;
+    color: cyan;
 }
 
 nav {
@@ -34,14 +35,14 @@ nav {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-nav>ul {
+nav ul {
     list-style-type: none;
     width: 100%;
     text-align: center;
     overflow: hidden;
 }
 
-nav>ul>li {
+nav ul li {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -49,48 +50,41 @@ nav>ul>li {
     line-height: 40px;
 }
 
-nav>ul>li>a {
+nav ul li a {
     text-decoration: none;
-    color: white;
+    color: cyan;
     display: block;
 }
 
-nav>ul>li>a:hover {
-    color: blue;
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-nav>ul>li>a>font {
-    font-size: 17px;
+nav ul li a font {
+    font-size: 15px;
 }
 
-header>p {
-    height: 30px;
-    text-align: center;
-}
-
-#main_body {
+#main-body {
     height: 1200px;
     width: 800px;
     margin: auto;
-    background-color: cyan;
 }
 
 footer {
     height: 100px;
     width: 100%;
-    background-color: #000;
-    margin-top: 5px;
+    margin-top: 15px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-footer>p {
+footer p {
     height: 30px;
     text-align: center;
-    color: white;
+    color: cyan;
     padding: 35px 0px 35px 0px;
 }
 
-footer>p>font {
+footer p font {
     font-size: 20px;
-    color: white;
+    color: cyan;
 }
