@@ -2,53 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>iddex</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/main.css">
-    <script type="text/javascript" src="./JS/main.js"></script>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMusic</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src="./js/main.js"></script>
 </head>
 
 <body>
-    <form id="main">
+    <form id="form-main">
         <!--header-->
         <header>
-            <p>
-                <font>Word of music</font>
-            </p>
+            <p>Word of music</p>
         </header>
-        <!--navigation-->
+        <!--nav-->
         <nav>
-            <ul>
-                <li>
-                    <a href=="#">
-                        <font>Home</font>
-                    </a>
+            <ul id="nav-list" onclick="changeNavColor('nav-list-li', 'cyan', 'blue');">
+                <li class="nav-list-li">
+                    <a href="#">Home</a>
                 </li>
-                <li>
-                    <a href=="#">
-                        <font>Category</font>
-                    </a>
+                <li class="nav-list-li">
+                    <a href="#">Category</a>
                 </li>
-                <li>
-                    <a href=="#">
-                        <font>Rank</font>
-                    </a>
+                <li class="nav-list-li">
+                    <a href="#">Rank</a>
                 </li>
-                <li>
-                    <a href=="#">
-                        <font>About Us</font>
-                    </a>
+                <li class="nav-list-li">
+                    <a href="#">About Us</a>
                 </li>
             </ul>
         </nav>
         <!--main_body-->
-        <section id="main-body">
+        <section id="main-content">
         </section>
         <!--footer-->
         <footer>
-            <p>
-                <font>Copyright 2017&copy; Nhan, Qui</font>
-            </p>
+            <p>Copyright 2017&copy; Nhan, Qui</p>
         </footer>
     </form>
 </body>
