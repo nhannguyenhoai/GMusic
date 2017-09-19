@@ -50,8 +50,8 @@ html {
 }
 
 @media screen and (max-height: 450px) {
-    .nav-bar {padding-top: 15px;}
-    .nav-bar a {font-size: 18px;}
+    .nav-bar {padding-top: 10px;}
+    .nav-bar a {font-size: 20px;}
 }
 
 .btn-menu--font {
