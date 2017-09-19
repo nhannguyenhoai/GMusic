@@ -3,23 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GMusic</title>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <script type="text/javascript" src="./js/main.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 </head>
 
 <body>
     <div id="nav-bar" class="nav-bar nav-bar--position nav-bar--effect">
-        <a href="#" class="nav-bar__closebtn nav-bar__closebtn--position" onclick="closeNav()">&times;</a>
+        <a href="#" class="nav-bar__closebtn nav-bar__closebtn--position" onclick="close_nav()">&times;</a>
         <a href="#">Home</a>
         <a href="#">Album</a>
         <a href="#">Video</a>
         <a href="#">Rank</a>
-        <a href="#">About Us</a>
+        <a href="#" onclick="load_about();">Coppyright</a>
     </div>
-    <div style="margin: 10px;"><span class="btn-menu btn-menu--font btn-menu-effect" onclick="openNav()">&#9776; Menu</span></div>
+    <div style="margin: 10px;"><span class="btn-menu btn-menu--font btn-menu-effect" onclick="open_nav()">&#9776; Menu</span></div>
     <div id="main-content" class="main-content main-content--position main-content--effect">
-        
     </div>
 </body>
 
