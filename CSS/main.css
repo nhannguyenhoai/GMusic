@@ -1,86 +1,74 @@
-* {
-    padding: 0px;
-    margin: 0px;
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
 }
 
-html { 
-    /*background: url(../Public/Image/background.jpg) no-repeat center fixed;*/
-    background-color: rgba(12, 14, 19, 1);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: sans-serif;
+html {
+        /*background: url(../Public/Image/background.jpg) no-repeat center fixed;*/
+        background-color: rgba(12, 14, 19, 1);
+        /* -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; */
+        font-family: sans-serif;
 }
 
-header {
-    height: 50px;
-    width: 100%;
-    margin-bottom: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
+.nav-bar--position {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    overflow-x: hidden;
+    padding-top: 50px;
 }
 
-header p {
-    height: 50px;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 30px;
-    color: cyan;
+.nav-bar--effect {
+    transition: 0.5s;
 }
 
-nav {
-    height: 160px;
-    width: 42%;
-    margin: auto;
-    margin-bottom: 5px;
-    margin-bottom: 5px;
-    background-color: rgba(12, 14, 19, 1);
-}
-
-nav #nav-list{
-    list-style-type: none;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-    font-size: 16px;
-}
-
-nav #nav-list li {
-    display: inline-block;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-}
-
-nav #nav-list li a {
+.nav-bar a {
+    padding: 10px 20px 20px 30px;
     text-decoration: none;
     color: cyan;
     display: block;
+    transition: 0.3s
 }
 
-nav #nav-list li a:hover {
-    background-color: rgba(0, 0, 0, 1);
-    border-radius: 10px;
+.nav-bar a:hover, .offcanvas a:focus{
+    color: white;
 }
 
-#main-content {
-    height: 1200px;
-    width: 800px;
-    margin: auto;
+.nav-bar__closebtn--position {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    margin-left: 50px;
 }
 
-footer {
-    height: 100px;
-    width: 100%;
-    margin-top: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
+@media screen and (max-height: 450px) {
+    .nav-bar {padding-top: 15px;}
+    .nav-bar a {font-size: 18px;}
 }
 
-footer p {
-    font-size: 20px;
-    height: 30px;
-    text-align: center;
+.btn-menu--font {
     color: cyan;
-    padding: 35px 0px 35px 0px;
+    cursor: pointer;
+}
+
+.btn-menu-position {
+    padding: 10px;
+}
+
+.btn-menu-effect:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
 }
