@@ -3,46 +3,46 @@
     margin: 0px;
 }
 
-html { 
+html {
     background: url(../Public/Image/background.jpg) no-repeat center fixed;
 }
 
 body {
-    font-family: sans-serif;    
+    font-family: sans-serif;
 }
 
 header {
     height: 50px;
     width: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-header>p {
+header p {
     height: 30px;
     text-align: center;
     padding: 10px 0px 10px 0px;
 }
 
-header>p>font {
+header p font {
     font-size: 30px;
-    color: white;
+    color: cyan;
 }
 
 nav {
     height: 40px;
     width: 100%;
     margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-nav>ul {
+nav ul {
     list-style-type: none;
     width: 100%;
-    background: #e4e4e4;
     text-align: center;
     overflow: hidden;
 }
 
-nav>ul>li {
+nav ul li {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -50,52 +50,120 @@ nav>ul>li {
     line-height: 40px;
 }
 
-nav>ul>li>a {
+nav ul li a {
     text-decoration: none;
-    color: black;
+    color: cyan;
     display: block;
 }
 
-nav>ul>li>a:hover {
-    color: red;
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-nav>ul>li>a>font {
-    font-size: 17px;
+nav ul li a font {
+    font-size: 15px;
 }
 
-header>p {
+header p {
     height: 30px;
     text-align: center;
 }
 
-#show {
+#main-body {
     height: 1200px;
     width: 800px;
     margin: auto;
 }
 
-#playlistmp3 {
+#mp3-playlist {
     list-style-type: none;
     width: 100%;
     display: table;
 }
 
-#playlistmp3 li {
-    color: #0BF521;
-    background-color: black;
+#mp3-playlist li {
+    color: cyan;
+    background-color: rgba(0, 0, 0, 0.5);;
     cursor: pointer;
-    padding: 20px;
-    border: 1px solid black;
+    padding: 15px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#playlistmp3 li:hover {
+#mp3-playlist li:hover {
     color: red;
-    background-color: #4F4C4C;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#audioarea {
+#mp3-area {
     width: 100%;
+}
+
+#status{
+    font-size: 15px;
+    color: cyan;
+    text-align: center;
+    padding: 0px 10px 10px 0px;
+}
+
+
+#next,#previous,#reload{
+    height: 100%;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    color: cyan;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid cyan;
+}
+
+::-webkit-media-controls {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    display: -webkit-flex;
+}
+
+
+audio::-webkit-media-controls-panel{
+    display: -webkit-flex;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: inherit;
+    z-index: 0;
+    overflow: hidden;
+     background-color: rgba(0, 0, 0, 0.5);
+}
+audio:-webkit-full-page-media {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+audio:-webkit-full-page-media::-webkit-media-controls-panel {
+    bottom: 0px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: rgba(0, 255, 255, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 255, 255, 0.5); 
 }
 
 footer {
@@ -105,14 +173,14 @@ footer {
     margin-top: 5px;
 }
 
-footer>p {
+footer p {
     height: 30px;
     text-align: center;
     color: white;
     padding: 35px 0px 35px 0px;
 }
 
-footer>p>font {
+footer p font {
     font-size: 20px;
     color: white;
 }

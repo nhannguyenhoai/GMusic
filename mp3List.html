@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>iddex</title>
-    <link rel="stylesheet" type="text/css" href="./CSS//mp3List.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/mp3List.css">
     <script type="text/javascript" src="./JS/mp3List.js"></script>
 </head>
 
-<body>
+<body onload="loadFirst('mp3-area','mp3-playlist','status')">
     <form id="main">
         <!--header-->
         <header>
@@ -42,26 +42,22 @@
             </ul>
         </nav>
         <!--show-->
-        <section id="show">
-            <audio id="audioarea" controls autoplay loop></audio>
-            <ul id="playlistmp3">
+        <section id="main-body">
+            <audio id="mp3-area" controls=" " "></audio>
+            <p id="status"></p>
+			<center>
+				<input type="button" id="previous" value="Previous" onclick="loadPreviousMP3('mp3-area','mp3-playlist','status')">
+				<input type="button" id="next" value="Next" onclick="loadNextMP3('mp3-area','mp3-playlist','status')">				
+				<input type="button" id="reload" value="Reload" onclick="loadFirst('mp3-area','mp3-playlist','status')">
+			</center>
+
+
+            <ul id="mp3-playlist" onclick="loadOnClick('mp3-area','mp3-playlist','status')">
+                <li mp3url="Public/mp3/DaBietSeCoNgayHomQua.mp3">Da biet se co ngay hom qua</li>
                 <li mp3url="Public/mp3/DoiThay.mp3">Doi thay</li>
                 <li mp3url="Public/mp3/NguoiAy.mp3">Nguoi Ay</li>
                 <li mp3url="Public/mp3/yeu.mp3">Yeu</li>
             </ul>
-            <script type="text/javascript">
-            $(function() {
-                $("#playlistmp3 li").on("click", function() {
-                    $("#audioarea").attr({
-                        "src": $(this).attr("mp3url"),
-                        "autoplay": "autoplay"
-                    })
-                })
-                $("#audioarea").attr({
-                    "src": $("#playlistmp3 li").eq(0).attr("mp3url")
-                })
-            })
-            </script>
         </section>
         <!--footer-->
         <footer>
