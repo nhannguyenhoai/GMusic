@@ -42,6 +42,7 @@ function loadFirst(mp3, playlistId, statusId) {
     setDefaultColor(childs);
     var mp3url = childs[currentIndex].getAttribute("mp3url");
     childs[currentIndex].setAttribute("style", "color:red");
+    currentIndex++;
     setMP3(mp3, mp3url, statusId);
     var mp3Song = document.getElementById(mp3);
     mp3Song.addEventListener("ended", function() {
@@ -78,30 +79,30 @@ function loadNextMP3(mp3, playlistId, statusId) {
     // body...
     var childs = getChildsBaseOnParent("li", playlistId);
     if (currentIndex < childs.length) {
+        console.log(currentIndex);
         setDefaultColor(childs);
         childs[currentIndex].setAttribute("style", "color:red");
         setMP3(mp3, childs[currentIndex].getAttribute("mp3url"), statusId);
         currentIndex++;
-    }else{
-    	setDefaultColor(childs);
-    	loadFirst(mp3,playlistId,statusId);
+        console.log(currentIndex);
+    } else {
+        setDefaultColor(childs);
+        loadFirst(mp3, playlistId, statusId);
     }
 }
 
-function loadPreviousMP3(mp3,playlistId,statusId) {
-	// body...
-	var childs=getChildsBaseOnParent("li",playlistId);
-	if(currentIndex-1>0){
-		setDefaultColor(childs);
-		currentIndex-=2;
-		childs[currentIndex].setAttribute("style","color:red");
-		setMP3(mp3,childs[currentIndex].getAttribute("mp3url"),statusId);
-		currentIndex++;
-	}
-	else
-	{
-		currentIndex=childs.length-1;
-		setDefaultColor(childs);
-		loadNextMP3(mp3,playlistId,statusId);
-	}
+function loadPreviousMP3(mp3, playlistId, statusId) {
+    // body...
+    var childs = getChildsBaseOnParent("li", playlistId);
+    if (currentIndex - 1 > 0) {
+        setDefaultColor(childs);
+        currentIndex -= 2;
+        childs[currentIndex].setAttribute("style", "color:red");
+        setMP3(mp3, childs[currentIndex].getAttribute("mp3url"), statusId);
+        currentIndex++;
+    } else {
+        currentIndex = childs.length - 1;
+        setDefaultColor(childs);
+        loadNextMP3(mp3, playlistId, statusId);
+    }
 }
