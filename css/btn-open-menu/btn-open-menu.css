@@ -1,0 +1,19 @@
+.btn-open-menu--size {
+    height: 50px;
+}
+
+.btn-open-menu--background {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#btn-open-menu span{
+    font-size: 20px;
+    color: cyan;
+    padding: 10px 0px 10px 10px;
+    line-height: 50px;
+}
+
+#btn-open-menu span:hover {
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.main--size {
+    height: 1100px;
+    width: 50%
+}
+
+.main--position {
+    padding: auto;
+    margin: auto;
+}
+
+.main--background {
+    background-color: rgba(0, 0, 0, 0.5)
+}

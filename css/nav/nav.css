@@ -1,0 +1,31 @@
+.nav--size {
+    height: 100%;
+    width: 0px;
+}
+
+.nav--position {
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.nav--background {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.nav--magic {
+    transition: 0.5s;
+}
+
+.nav a {
+    margin: 0px 0px 30px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: cyan;
+    display: block;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    color: white;
+}
