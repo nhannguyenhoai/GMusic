@@ -2,9 +2,15 @@
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
+    font-size: 20px;
 }
 html {
-    /* background: url("../../image/background.jpg") no-repeat fixed;
-    background-size: cover; */
-    background-color: rgba(41, 50, 60, 1);
+    background: url("../../image/background.jpg") no-repeat center  center fixed;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 450px){
+    * {
+        font-size: 14px;
+    }
 }

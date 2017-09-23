@@ -1,14 +1,14 @@
 .main--size {
     height: 1200px;
-    width: 55%
+    width: 50%
 }
 
 .main--position {
     padding: auto;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 5px;
 }
 
 .main--background {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
 }

@@ -5,7 +5,6 @@
 .btn-open-menu--position {
     position: fixed;
     top: 0;
-    z-index: 1;
     width: 100%;
 }
 
@@ -17,15 +16,13 @@
     transition: margin-left 1s;
 }
 
-#btn-open-menu p{
-    font-size: 16px;
+#btn-open-menu span{
     color: cyan;
-    margin-right: 95%; 
-    padding-left: 5px;
     line-height: 50px;
+    margin-left: 10px;
 }
 
-#btn-open-menu p:hover {
+#btn-open-menu span:hover {
     color: white;
     cursor: pointer;
 }
