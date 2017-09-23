@@ -3,7 +3,7 @@
 }
 
 .btn-open-menu--background {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #btn-open-menu span{

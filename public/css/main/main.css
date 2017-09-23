@@ -1,5 +1,5 @@
 .main--size {
-    height: 1100px;
+    height: 1200px;
     width: 50%
 }
 
@@ -9,5 +9,5 @@
 }
 
 .main--background {
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.2)
 }
