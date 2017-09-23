@@ -4,6 +4,7 @@
     font-family: sans-serif;
 }
 html {
-    background: url("../../image/background.jpg") no-repeat fixed;
-    background-size: cover;
+    /* background: url("../../image/background.jpg") no-repeat fixed;
+    background-size: cover; */
+    background-color: rgba(41, 50, 60, 1);
 }
