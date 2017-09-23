@@ -7,28 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./public/css/all/all.css">
     <link rel="stylesheet" type="text/css" href="./public/css/nav/nav.css">
-    <link rel="stylesheet" type="text/css" href="./public/css/nav/nav__btn-close.css">
     <link rel="stylesheet" type="text/css" href="./public/css/btn-open-menu/btn-open-menu.css">
     <link rel="stylesheet" type="text/css" href="./public/css/main/main.css">
     <link rel="stylesheet" type="text/css" href="./public/css/footer/footer.css">
     <script src="./public/js/nav/nav.js"></script>
+    <script src="./public/js/about/about.js"></script>
     <title>WOM</title>
 </head>
 
 <body>
-    <div id="nav" class="nav nav--size nav--position nav--background nav--magic">
-        <a href="#" id="nav__btn-close" onclick="closeNav()">&times;</a>
+    <div id="nav" class="nav--size nav--position nav--background nav--magic">
+        <a href="#" style="text-align: right; font-size: 16px;" onclick="closeNav(); return false;"><<</a>
         <a href="./index.html">Home</a>
         <a href="#">Mp3</a>
         <a href="#">Video</a>
         <a href="#">Rank</a>
-        <a href="#">Contact</a>
+        <a href="#" onclick="setAbout();">Contact</a>
     </div>
-    <div id="btn-open-menu" class="btn-open-menu btn-open-menu--size btn-open-menu--background">
-        <span onclick="openNav()">&#9776; Menu</span>
+    <div id="btn-open-menu" class="btn-open-menu--size btn-open-menu--position btn-open-menu--background btn-open-menu--magic">
+        <p id="btn-open-menu__content" onclick="openNav(); return false;">&#9776; Menu</p>
     </div>
-    <div id="main" class="main main--size main--position main--background"></div>
-    <div id="footer" class="footer footer--size footer--position footer--background"><p>Design &copy; 2017 By Nhan</p></div>
+    <div id="main" class="main--size main--position main--background"></div>
+    <div id="footer" class="footer--size footer--position footer--background footer--magic">
+        <p>Design &copy; 2017 By Nhan</p>
+    </div>
 </body>
 
 </html>

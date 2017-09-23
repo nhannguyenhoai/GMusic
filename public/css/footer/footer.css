@@ -3,16 +3,20 @@
 }
 
 .footer--position {
-    padding: 0;
-    margin: 0;
+    margin-top: 5px;
+    width: 100%;
 }
 
 .footer--background {
-    background-color: rgba(0, 0, 0, 0.9)
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.footer--magic {
+    transition: margin-left 1s;
 }
 
 #footer p {
-    font-size: 20px;
+    font-size: 18px;
     color: cyan;
     line-height: 100px;
     text-align: center;

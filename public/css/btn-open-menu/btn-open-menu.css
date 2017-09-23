@@ -2,18 +2,29 @@
     height: 50px;
 }
 
-.btn-open-menu--background {
-    background-color: rgba(0, 0, 0, 0.9);
+.btn-open-menu--position {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-#btn-open-menu span{
-    font-size: 20px;
+.btn-open-menu--background {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.btn-open-menu--magic {
+    transition: margin-left 1s;
+}
+
+#btn-open-menu p{
+    font-size: 16px;
     color: cyan;
-    padding: 10px 0px 10px 10px;
+    margin-right: 95%; 
+    padding-left: 5px;
     line-height: 50px;
 }
 
-#btn-open-menu span:hover {
+#btn-open-menu p:hover {
     color: white;
     cursor: pointer;
 }
