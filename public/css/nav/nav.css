@@ -10,8 +10,8 @@
 }
 
 .nav--background {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-top-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 5px;
 }
 
 .nav--magic {
@@ -22,13 +22,13 @@
     text-decoration: none;
     color: white;
     display: block;
-    margin: 0px 0px 20px 10px;
-    padding: 5px;
+    margin: 0px 0px 10px 10px;
+    padding: 10px;
 }
 
 #nav a:hover {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media only screen and (max-width: 800px){
