@@ -1,21 +1,19 @@
 .footer--size {
-    height: 100px;
-}
-
-.footer--position {
+    height: 200px;
     width: 100%;
 }
 
-.footer--background {
-    background-color: rgba(0, 0, 0, 0.0);
+.footer--position {
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
-.footer--magic {
-    transition: margin-left 1s;
+.footer--background {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #footer p {
-    color: cyan;
-    line-height: 100px;
+    color: white;
     text-align: center;
+    line-height: 40px;
 }
