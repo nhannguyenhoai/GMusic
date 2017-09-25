@@ -3,8 +3,8 @@
     height: 200px;
     width: 100%;
     /* position */
-    padding-top: 20px;
     margin-top: 10px;
+    padding-top: 20px;
     /* background */
     background-color: rgba(0, 0, 0, 0);
 }

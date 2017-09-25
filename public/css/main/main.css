@@ -3,9 +3,9 @@
     height: 1200px;
     width: 50%;
     /* position */
-    padding: auto;
     margin: auto;
     margin-top: 60px;
+    padding: auto;
     /* background */
     background-color: rgba(0, 0, 0, 1);
 }

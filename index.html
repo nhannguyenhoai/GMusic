@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./framework/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./public/css/all/all.css">
     <link rel="stylesheet" type="text/css" href="./public/css/nav/nav.css">
     <link rel="stylesheet" type="text/css" href="./public/css/nav/nav__close-icon.css">
@@ -13,19 +14,21 @@
     <link rel="stylesheet" type="text/css" href="./public/css/main/main.css">
     <link rel="stylesheet" type="text/css" href="./public/css/footer/footer.css">
     <script src="./public/js/nav/nav.js"></script>
+    <script src="./public/js/about/about.js"></script>
     <title>GMusic</title>
 </head>
 
 <body>
     <div id="nav">
-        <a id="nav__close-icon" href="#" onclick="closeNav(); return false;">&#8674;</a>
+        <a id="nav__close-icon" href="#" onclick="closeNav();">&#8674;</a>
         <a href="#">Home</a>
         <a href="#">Mp3</a>
         <a href="#">Video</a>
         <a href="#">Rank</a>
+        <a href="#" onclick="loadAbout();">About</a>
     </div>
     <div id="btn-open-nav-bar">
-        <span id="btn-open-nav-bar__icon" onclick="openNav(); return false;">&#9776; Menu</span>
+        <span id="btn-open-nav-bar__icon" onclick="openNav();">&#9776; Menu</span>
     </div>
     <div id="main"></div>
     <div id="footer">
