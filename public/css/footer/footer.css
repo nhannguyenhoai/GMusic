@@ -1,19 +1,16 @@
-.footer--size {
+#footer {
+    /* size */
     height: 200px;
     width: 100%;
-}
-
-.footer--position {
-    margin-top: 10px;
+    /* position */
     padding-top: 20px;
-}
-
-.footer--background {
+    margin-top: 10px;
+    /* background */
     background-color: rgba(0, 0, 0, 0);
 }
 
 #footer p {
-    color: white;
     text-align: center;
     line-height: 30px;
+    color: white;
 }

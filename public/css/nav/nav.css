@@ -1,20 +1,15 @@
-.nav--size {
+#nav {
+    /* size */
     height: 100%;
     width: 0;
-}
-
-.nav--position {
+    /* position */
     position: fixed;
     overflow-x: hidden;
     top: 50px;
-}
-
-.nav--background {
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background */
+    background-color: rgba(255, 255, 255, 0.1);
     border-top-right-radius: 5px;
-}
-
-.nav--magic {
+    /* magic */
     transition: 1s;
 }
 
@@ -27,7 +22,7 @@
 }
 
 #nav a:hover {
-    border-radius: 5px;
+    border-radius: 0px 5px 0px 0px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
